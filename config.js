@@ -2,10 +2,13 @@ module.exports = {
     dirname: __dirname,
     isbun: true,
     ssr: true,
+    // 服务是否只有一个（告知webpack打包方式）
+    isSingle: true,
+    frame: 'react',
     entry: {
-        index: './src/entry/index.js'
+        index: './client/entry/index.tsx'
     },
-    serverEntry: './src/app/base/index.js',
+    serverEntry: './client/app/base/index.ts',
     output: './build/static',
     template: '',
     appname: '$_appname',
@@ -22,8 +25,8 @@ module.exports = {
     libs: [], // 需要额外打包的公共库
     uglifyJs: true, // 开发模式下无效
     optimizeCSS: true, // 开发模式下无效
-    supportFileType: ['jsx', 'less'], // 需要支持的文件格式
+    supportFileType: ['ts', 'tsx', 'less'], // 需要支持的文件格式
     globalPath: {
-        '@common': './src/app/common'
+        '@common': './client/app/common'
     }
 };
