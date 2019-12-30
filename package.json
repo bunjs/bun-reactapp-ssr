@@ -34,6 +34,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "bun-tsplugin": "^1.0.0",
     "@babel/preset-typescript": "^7.7.2",
     "@types/node": "^12.12.11",
     "babel-eslint": "^10.0.1",
